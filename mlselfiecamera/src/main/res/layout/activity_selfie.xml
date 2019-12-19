@@ -1,0 +1,94 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:keepScreenOn="true">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <net.fitken.mlselfiecamera.camera.CameraSourcePreview
+                android:id="@+id/camera_preview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+                app:layout_constraintStart_toStartOf="@+id/guideline_left"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <net.fitken.mlselfiecamera.camera.GraphicOverlay
+                    android:id="@+id/face_overlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <net.fitken.mlselfiecamera.widget.CircleCameraMaskPreview
+                    android:id="@+id/camera_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </net.fitken.mlselfiecamera.camera.CameraSourcePreview>
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawableStart="@drawable/ic_ml_back"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:paddingStart="0dp"
+                android:paddingTop="@dimen/positive_10dp"
+                android:paddingEnd="@dimen/positive_10dp"
+                android:paddingBottom="@dimen/positive_10dp"
+                android:text="@string/back"
+                android:textColor="#f78320"
+                android:textSize="@dimen/text_size_13sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline_left"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_capture"
+                android:layout_width="@dimen/positive_60dp"
+                android:layout_height="@dimen/positive_60dp"
+                android:layout_marginBottom="@dimen/positive_10dp"
+                android:alpha="0.3"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_ml_capture"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/look_straight_to_the_camera"
+                android:layout_marginBottom="@dimen/positive_5dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_12sp"
+                app:layout_constraintBottom_toTopOf="@+id/iv_capture"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+                app:layout_constraintStart_toStartOf="@+id/guideline_left" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

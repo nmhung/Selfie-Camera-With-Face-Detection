@@ -1,0 +1,2 @@
+include ':app', ':mlselfiecamera'
+rootProject.name='ML Selfie Camera'

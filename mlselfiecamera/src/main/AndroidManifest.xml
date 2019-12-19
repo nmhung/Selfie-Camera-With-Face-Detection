@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.fitken.mlselfiecamera">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application>
+        <activity android:name=".selfie.SelfieActivity" />
+    </application>
+</manifest>

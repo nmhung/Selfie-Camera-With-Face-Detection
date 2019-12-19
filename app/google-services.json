@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "647567020456",
+    "firebase_url": "https://fitken-b731e.firebaseio.com",
+    "project_id": "fitken-b731e",
+    "storage_bucket": "fitken-b731e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647567020456:android:eb0ecdcce06b2e5f174d9d",
+        "android_client_info": {
+          "package_name": "net.fitken.example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647567020456-28d0d29dtan9gb3m8bltbbanik39un68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjJkPyEAgYLTCU4z0N6ot297iruoMEPdc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647567020456-28d0d29dtan9gb3m8bltbbanik39un68.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
